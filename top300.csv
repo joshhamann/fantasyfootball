@@ -1,3 +1,4 @@
+Rank,Player,Position,Team,PositionDetail
 1,Le'Veon Bell,RB,PIT,RB1
 2,Todd Gurley II,RB,LAR,RB2
 3,David Johnson,RB,ARI,RB3
@@ -15,13 +16,13 @@
 15,Keenan Allen,WR,LAC,WR5
 16,Michael Thomas,WR,NO,WR6
 17,Devonta Freeman,RB,ATL,RB11
-18,A.J,Green,WR,CIN,WR7
+18,A.J. Green,WR,CIN,WR7
 19,Christian McCaffrey,RB,CAR,RB12
 20,Rob Gronkowski,TE,NE,TE1
 21,Davante Adams,WR,GB,WR8
 22,Mike Evans,WR,TB,WR9
 23,LeSean McCoy,RB,BUF,RB13
-24,T.Y,Hilton,WR,IND,WR10
+24,T.Y. Hilton,WR,IND,WR10
 25,Adam Thielen,WR,MIN,WR11
 26,Stefon Diggs,WR,MIN,WR12
 27,Tyreek Hill,WR,KC,WR13
@@ -95,7 +96,7 @@
 95,Carlos Hyde,RB,CLE,RB36
 96,Sony Michel,RB,NE,RB37
 97,Marlon Mack,RB,IND,RB38
-98,C.J,Anderson,RB,CAR,RB39
+98,C.J. Anderson,RB,CAR,RB39
 99,Kyle Rudolph,TE,MIN,TE9
 100,Ty Montgomery,RB,GB,RB40
 101,Marqise Lee,WR,JAC,WR46
@@ -121,7 +122,7 @@
 121,Cameron Meredith,WR,NO,WR54
 122,Paul Richardson,WR,WAS,WR55
 123,DeSean Jackson,WR,TB,WR56
-124,D.J,Moore,WR,CAR,WR57
+124,D.J. Moore,WR,CAR,WR57
 125,Michael Gallup,WR,DAL,WR58
 126,Chris Godwin,WR,TB,WR59
 127,Matthew Stafford,QB,DET,QB10
@@ -207,7 +208,7 @@
 207,Elijah McGuire,RB,NYJ,RB69
 208,Jonathan Stewart,RB,NYG,RB70
 209,James Conner,RB,PIT,RB71
-210,O.J,Howard,TE,TB,TE21
+210,O.J. Howard,TE,TB,TE21
 211,Jared Cook,TE,OAK,TE22
 212,Mitchell Trubisky,QB,CHI,QB21
 213,Christian Kirk,WR,ARI,WR75
@@ -233,11 +234,11 @@
 233,Corey Coleman,WR,BUF,WR89
 234,Jermaine Kearse,WR,NYJ,WR90
 235,Rod Smith,RB,DAL,RB72
-236,T.J,Yeldon,RB,JAC,RB73
+236,T.J. Yeldon,RB,JAC,RB73
 237,John Kelly,RB,LAR,RB74
 238,Corey Grant,RB,JAC,RB75
 239,Alfred Blue,RB,HOU,RB76
-240,C.J,Prosise,RB,SEA,RB77
+240,C.J. Prosise,RB,SEA,RB77
 241,Mark Walton,RB,CIN,RB78
 242,Tavon Austin,RB,DAL,RB79
 243,Eli Manning,QB,NYG,QB24
@@ -258,7 +259,7 @@
 258,Ryan Griffin,TE,HOU,TE28
 259,Virgil Green,TE,LAC,TE29
 260,Marquez Valdes-Scantling,WR,GB,WR93
-261,Equanimeous St,Brown,WR,GB,WR94
+261,Equanimeous St. Brown,WR,GB,WR94
 262,Zay Jones,WR,BUF,WR95
 263,Adam Humphries,WR,TB,WR96
 264,Joe Williams,RB,SF,RB81
@@ -269,7 +270,7 @@
 269,Sam Darnold,QB,NYJ,QB30
 270,Sam Bradford,QB,ARI,QB31
 271,Keke Coutee,WR,HOU,WR97
-272,D.J,Chark,WR,JAC,WR98
+272,D.J. Chark,WR,JAC,WR98
 273,Ryan Switzer,WR,OAK,WR99
 274,DaeSean Hamilton,WR,DEN,WR100
 275,Tre'Quan Smith,WR,NO,WR101
@@ -279,7 +280,7 @@
 279,Boston Scott,RB,NO,RB86
 280,Jaylen Samuels,RB,PIT,RB87
 281,Damien Williams,RB,KC,RB88
-282,T.J,Logan,RB,ARI,RB89
+282,T.J. Logan,RB,ARI,RB89
 283,Justin Jackson,RB,LAC,RB90
 284,Curtis Samuel,WR,CAR,WR102
 285,Packers D/ST,DST,GB,DST17
