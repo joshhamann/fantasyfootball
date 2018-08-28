@@ -1,9 +1,13 @@
 import pandas as pd
 import pygsheets
+import sys
+import datetime
+import time
+import curses
 
 top_300_file = 'top300.csv'
 team_rank = 'team_rank.csv'
-service_file = 'fantasyfootball-definitely-not-a-key.json'
+service_file = 'sa.json'
 
 def csv_to_df(file_name):
     """pull top ranked players into df"""
@@ -48,15 +52,31 @@ def df_magic(player_rank_df,team_rank_df,player_draft_status_df):
     return mother_load_df
 
 def main():
+    stdscr = curses.initscr()
+    curses.noecho()
+    curses.cbreak()
+
     """Take ESPN top 300, take team ranks(manually loaded), and available players
     Return a list of choices, choices, choices..."""
     player_rank_df = csv_to_df(top_300_file)
     team_rank_df = csv_to_df(team_rank)
-    player_draft_status_df = gsheet_api_to_df()
-    
-    choices_choices = df_magic(player_rank_df,team_rank_df,player_draft_status_df)
-    
-    print (choices_choices)
+
+    try:
+        while True:
+            player_draft_status_df = gsheet_api_to_df()
+        
+            choices_choices = df_magic(player_rank_df,team_rank_df,player_draft_status_df)
+
+            stdscr.addstr(0, 0, str(datetime.datetime.now()))
+            stdscr.addstr(1, 0, str(choices_choices))
+            stdscr.refresh()
+            time.sleep(5)
+    finally:
+        curses.echo()
+        curses.nocbreak()
+        curses.endwin()
+
+    #print (choices_choices)
     
 if __name__ == "__main__":
     main()
