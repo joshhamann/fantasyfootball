@@ -17,18 +17,18 @@ def csv_to_df(file_name):
 def gsheet_api_to_df():
     """Connect to 2018 Fantasy Draft, pull Available Players and return df"""
     gc = pygsheets.authorize(service_file=service_file)
-    sh = gc.open("2018 Fantasy Draft")
+    sh = gc.open("2019 Fantasy Draft")
     wks = sh.worksheet_by_title("AvailablePlayers")
     cell_matrix = wks.get_all_values(returnas='matrix')
     df = pd.DataFrame(cell_matrix)
-    
+
     #only grab relevant columns
     df = df.iloc[:,0:5]
 
     #make header row header and remove that false data row from data set
     df.columns = df.iloc[0]
     df = df.iloc[1:]
-    
+
     return df
 
 def df_magic(player_rank_df,team_rank_df,player_draft_status_df):
@@ -36,7 +36,7 @@ def df_magic(player_rank_df,team_rank_df,player_draft_status_df):
     To Do:  Can insert custom ranking mechanism, ML Model, whatever here later"""
     #join player rank to team rank df
     player_team_rank_df = pd.merge(player_rank_df,team_rank_df, how='left', on=['Team'])
-    
+
     #join resulting df to remaining players
     mother_load_df = pd.merge(player_team_rank_df,player_draft_status_df,how='left',on=['Player'])
     #filter by available players
@@ -48,7 +48,7 @@ def df_magic(player_rank_df,team_rank_df,player_draft_status_df):
     mother_load_df['Team_Rank'] = mother_load_df['Team_Rank'].fillna(0.0).astype(int)
     #ranked, grouped by position
     mother_load_df = mother_load_df.groupby('Position').head(3)
-    
+
     return mother_load_df
 
 def main():
@@ -64,7 +64,7 @@ def main():
     try:
         while True:
             player_draft_status_df = gsheet_api_to_df()
-        
+
             choices_choices = df_magic(player_rank_df,team_rank_df,player_draft_status_df)
 
             stdscr.addstr(0, 0, str(datetime.datetime.now()))
@@ -76,7 +76,10 @@ def main():
         curses.nocbreak()
         curses.endwin()
 
-    #print (choices_choices)
-    
+    # player_draft_status_df = gsheet_api_to_df()
+    #
+    # choices_choices = df_magic(player_rank_df,team_rank_df,player_draft_status_df)
+    # print (choices_choices)
+
 if __name__ == "__main__":
     main()
