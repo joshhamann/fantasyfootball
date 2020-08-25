@@ -15,9 +15,9 @@ def csv_to_df(file_name):
     return df
 
 def gsheet_api_to_df():
-    """Connect to 2018 Fantasy Draft, pull Available Players and return df"""
+    """Connect to Fantasy Draft, pull Available Players and return df"""
     gc = pygsheets.authorize(service_file=service_file)
-    sh = gc.open("2019 Fantasy Draft")
+    sh = gc.open("2020 Fantasy Draft")
     wks = sh.worksheet_by_title("AvailablePlayers")
     cell_matrix = wks.get_all_values(returnas='matrix')
     df = pd.DataFrame(cell_matrix)
